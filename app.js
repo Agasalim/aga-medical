@@ -4225,3 +4225,17 @@
   );
 });
 //# sourceMappingURL=bootstrap.bundle.min.js.map
+
+    const slideButtons = document.querySelectorAll('.slide_btns button');
+    const carousel = document.querySelector('#carouselExampleCaptions');
+    carousel.addEventListener('slid.bs.carousel', (event) => {
+        const activeIndex = event.to;
+        slideButtons.forEach((btn) => btn.classList.remove('active'));
+        slideButtons[activeIndex].classList.add('active');
+    });
+    slideButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+            carouselInstance.to(index);
+        });
+    });

@@ -30,12 +30,16 @@ nav{opacity: 0.8;}
 .carousel-control-prev{
     top: auto;
     bottom: 50px;
-    left: 30%;
+    left: 20%;
+    margin-right: 0 !important;
+    padding: 0 !important;
 }
 .carousel-control-next{
     top: auto;
     bottom: 50px;    
-    right: 30%;
+    right: 20%;
+    margin-left: 0 !important;
+    padding: 0 !important;
 }
 .slide_btns{
     display: flex;
@@ -51,15 +55,16 @@ nav{opacity: 0.8;}
     display: inline-block;
     padding: 0;
 }
-.slide_btns img{
+.slide_btns button img{
     width: 30px;
     transition: .3s;
+    transition: transform 0.3s ease;
 }
-.slide_btns button:active img{transform: scale(1.5);}
+.slide_btns button.active img {transform: scale(1.4);}
 @media (max-width:768px) {.carousel-caption{width: 90%;}}
 @media (max-width:800px) {
-    .carousel-control-prev{left: 25%;}
-    .carousel-control-next{right: 25%;}
+    .carousel-control-prev{left: 15%;}
+    .carousel-control-next{right: 15%;}
 }
 @media (max-width:600px) {
     .carousel-item{height: 70vh;}
